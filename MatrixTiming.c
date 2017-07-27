@@ -36,7 +36,7 @@ int main(){
     // Goes through and changes the size of the array all at all points
     for ( currentSize=50; currentSize<N; currentSize+=50 ){
         int i,j,k; double sum, r; static double c[N][N];
-        if(currentSize == N-50) fprintf(ctr, "%d,",currentSize); else fprintf(ctr, "%d",currentSize);
+        if(currentSize == N-50) fprintf(ctr, "%d",currentSize); else fprintf(ctr, "%d,",currentSize);
 
 
         // IJK
@@ -52,7 +52,7 @@ int main(){
         QueryPerformanceCounter(&finish);
         elapsed = (int) (finish.QuadPart - start.QuadPart);
         printf("N(%d): %d\t",currentSize,elapsed);
-        if(currentSize == N-50) fprintf(ijk, "%d,", elapsed); else fprintf(ijk, "%d",currentSize);
+        if(currentSize == N-50) fprintf(ijk, "%d", elapsed); else fprintf(ijk, "%d,",currentSize);
         // JIK
         QueryPerformanceCounter(&start);
         for (j=0; j<currentSize; j++) {
@@ -66,7 +66,7 @@ int main(){
         QueryPerformanceCounter(&finish);
         elapsed = (int) (finish.QuadPart - start.QuadPart);
         printf("N(%d): %d\t",currentSize,elapsed);
-        if(currentSize == N-50) fprintf(jik, "%d,", elapsed); else fprintf(jik, "%d",currentSize);
+        if(currentSize == N-50) fprintf(jik, "%d", elapsed); else fprintf(jik, "%d,",currentSize);
 
 
         // KIJ
@@ -81,7 +81,7 @@ int main(){
         QueryPerformanceCounter(&finish);
         elapsed = (int) (finish.QuadPart - start.QuadPart);
         printf("N(%d): %d\t",currentSize,elapsed);
-        if(currentSize == N-50) fprintf(kij, "%d,", elapsed); else fprintf(kij, "%d",currentSize);
+        if(currentSize == N-50) fprintf(kij, "%d", elapsed); else fprintf(kij, "%d,",currentSize);
         // IKJ
         QueryPerformanceCounter(&start);
         for (i=0; i<currentSize; i++) {
@@ -94,7 +94,7 @@ int main(){
         QueryPerformanceCounter(&finish);
         elapsed = (int) (finish.QuadPart - start.QuadPart);
         printf("N(%d): %d\t",currentSize,elapsed);
-        if(currentSize == N-50) fprintf(ikj, "%d,", elapsed); else fprintf(ikj, "%d",currentSize);
+        if(currentSize == N-50) fprintf(ikj, "%d", elapsed); else fprintf(ikj, "%d,",currentSize);
 
         // JKI
         QueryPerformanceCounter(&start);
@@ -108,7 +108,7 @@ int main(){
         QueryPerformanceCounter(&finish);
         elapsed = (int) (finish.QuadPart - start.QuadPart);
         printf("N(%d): %d\t",currentSize,elapsed);
-        if(currentSize == N-50) fprintf(jki, "%d,", elapsed); else fprintf(jki, "%d",currentSize);
+        if(currentSize == N-50) fprintf(jki, "%d", elapsed); else fprintf(jki, "%d,",currentSize);
         // KJI
         QueryPerformanceCounter(&start);
         for (k=0; k<currentSize; k++) {
@@ -121,7 +121,7 @@ int main(){
         QueryPerformanceCounter(&finish);
         elapsed = (int) (finish.QuadPart - start.QuadPart);
         printf("N(%d): %d\n",currentSize,elapsed);
-        if(currentSize == N-50) fprintf(kji, "%d,", elapsed); else fprintf(kji, "%d",currentSize);
+        if(currentSize == N-50) fprintf(kji, "%d", elapsed); else fprintf(kji, "%d,",currentSize);
 
     }
 
