@@ -10,6 +10,7 @@ kji = csvread("kji.csv");
 
 figure(1);
 hold on;
+set(gca, 'Yscale','log');
 plot(x, ijk);
 plot(x, ikj);
 plot(x, jik);
